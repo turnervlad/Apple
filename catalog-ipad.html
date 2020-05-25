@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="catalog-ipad.css">
+    <title>Apple</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="#">
+                <img src="images/14640107471553227933-64.png" alt="">
+            </a>
+        </div>
+        <div class="header__menu">
+            <ul>
+                <a href="#">
+                    <li>Mac</li>
+                </a>
+                <a href="catalog-ipad.html">
+                    <li>iPad</li>
+                </a>
+                <a href="catalog-iphone.html">
+                    <li>iPhone</li>
+                </a>
+                <a href="#">
+                    <li>Watch</li>
+                </a>
+            </ul>
+        </div>
+        <a href="bag.html" class="header__bag">
+            <img src="images/19250417991537184110-32.png" alt=""> Bag $:<span class="header__bag-total">2696</span>
+        </a>
+        <div class="header__mobile">
+            <img id="openBurger" onclick="openBurger(this)" src="images/9961263041586786441-48.png" alt="">
+            <img id="hideBurger" onclick="hideBurger(this)" src="images/17115838791536572526-48.png" alt="">
+        </div>
+    </header>
+
+    <section id="mobileMenu" class="mobile__menu">
+        <div class="mobile__menu-block"><a href="">Mac</a></div>
+        <div class="mobile__menu-block"><a href="catalog-ipad.html">iPad</a> </div>
+        <div class="mobile__menu-block"><a href="catalog-iphone.html">iPhone</a> </div>
+        <div class="mobile__menu-block"><a href="">Watch</a> </div>
+    </section>
+
+    <section class="iphones">
+        <div class="iphones__header">iPhone</div>
+        <div class="iphones__body">
+            <div class="iphones__filters">
+                <div class="filter__name">
+                    <h3>iPad</h3>
+                    <div class="filter__name-item filter__item">
+                        <input type="checkbox" checked name="ipadpro" id="">
+                        <span>iPad Pro 2020</span>
+                    </div>
+                    <div class="filter__name-item filter__item">
+                        <input type="checkbox" checked name="ipadair" id="">
+                        <span>iPad Air 2019</span>
+                    </div>
+                    <div class="filter__name-item filter__item">
+                        <input type="checkbox" checked name="ipadmini" id="">
+                        <span>iPad Mini 2019</span>
+                    </div>
+                </div>
+                <div class="filter__memory">
+                    <h3>Memory</h3>
+                    <div class="filter__memory-item filter__item">
+                        <input type="checkbox" name="128" id="">
+                        <span>128Gb</span>
+                    </div>
+                    <div class="filter__memory-item filter__item">
+                        <input type="checkbox" name="256" id="">
+                        <span>256Gb</span>
+                    </div>
+                    <div class="filter__memory-item filter__item">
+                        <input type="checkbox" name="512" id="">
+                        <span>512GB</span>
+                    </div>
+                    <div class="filter__memory-item filter__item">
+                        <input type="checkbox" name="1024" id="">
+                        <span>1TB</span>
+                    </div>
+                </div>
+                <div class="filter_color">
+                    <h3>Color</h3>
+                    <div class="filter__color-item filter__item">
+                        <input type="checkbox" name="spacegray" id="">
+                        <span>Space Gray</span>
+                    </div>
+                    <div class="filter__color-item filter__item">
+                        <input type="checkbox" name="gold" id="">
+                        <span>Gold</span>
+                    </div>
+                    <div class="filter__color-item filter__item">
+                        <input type="checkbox" name="silver" id="">
+                        <span>Silver</span>
+                    </div>
+                </div>
+                <div class="filter__lte">
+                    <h3>Wireless</h3>
+                    <div class="filter__lte-item filter__item">
+                        <input type="checkbox" name="lte" id="">
+                        <span>Wi-Fi + LTE</span>
+                    </div>
+                    <div class="filter__lte-item filter__item">
+                        <input type="checkbox" name="wifi" id="">
+                        <span>Wi-Fi</span>
+                    </div>
+                </div>
+                <div class="filter__screen">
+                    <h3>Screen</h3>
+                    <div class="filter__screen-item filter__item">
+                        <input type="checkbox" name="12.9" id="">
+                        <span>12.9"</span>
+                    </div>
+                    <div class="filter__screen-item filter__item">
+                        <input type="checkbox" name="11" id="">
+                        <span>11"</span>
+                    </div>
+                    <div class="filter__screen-item filter__item">
+                        <input type="checkbox" name="10.5" id="">
+                        <span>10.5"</span>
+                    </div>
+                    <div class="filter__screen-item filter__item">
+                        <input type="checkbox" name="7.9" id="">
+                        <span>7.9"</span>
+                    </div>
+                </div>
+
+                <button onclick="filter()" class="filter__apply">Apply</button>
+                <button onclick="filterApplyMobile()" class="filter__apply filter__apply-mobile">Apply</button>
+                <img class="close-filter-cross" onclick="hideFilter()" src="images/17115838791536572526-48.png" alt="">
+
+            </div>
+
+
+            <div class="iphones__catalog">
+                <div class="iphones__catalog-sort">
+                    <span onclick="openFilters()" class="openFilters">Filters</span>
+                    <span>Sort</span>
+                    <select onchange="sort()" name="Sort" id="Sort">            
+                        <option value="nameaz">Name A to Z</option>
+                        <option value="nameza">Name Z to A</option>
+                        <option value="pricelowtohigh">Price Low to High</option>
+                        <option value="pricehightolow">Price High to Low</option>
+                        <option value="default">Default</option>
+                    </select>
+                    <!-- <button onclick="sort()" class="sort__apply">Apply</button> -->
+                </div>
+
+                <div class="iphones__catalog-content">
+                    <!-- <div class="iphone__item black se 64gb">
+                        <a href="index.html">
+                            <img src="images/iphone-se-64gb-black-mx9r2fs-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone SE 64Gb Black</p>
+                            <p class="iphone__item-price">$<span class="price">399</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div> -->
+                    <!-- <div class="iphone__item red">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-se-2020-64gb-red-mx9u2-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone SE 64Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">399</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item white">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-se-2020-64gb-white-mx9t2-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone SE 64Gb White</p>
+                            <p class="iphone__item-price">$<span class="price">399</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>                    
+                    <div class="iphone__item black">
+                        <a href="index.html">
+                            <img src="images/iphone-se-64gb-black-mx9r2fs-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone SE 128Gb Black</p>
+                            <p class="iphone__item-price">$<span class="price">449</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-se-2020-64gb-red-mx9u2-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone SE 128Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">449</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-se-2020-64gb-white-mx9t2-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone SE 128Gb White</p>
+                            <p class="iphone__item-price">$<span class="price">449</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-black-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 64Gb Black</p>
+                            <p class="iphone__item-price">$<span class="price">799</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-red-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 64Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">799</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-white-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 64Gb White</p>
+                            <p class="iphone__item-price">$<span class="price">799</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-black-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 128Gb Black</p>
+                            <p class="iphone__item-price">$<span class="price">849</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-red-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 128Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">849</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-white-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 128Gb White</p>
+                            <p class="iphone__item-price">$<span class="price">849</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-black-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 256Gb Black</p>
+                            <p class="iphone__item-price">$<span class="price">949</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-red-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 256Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">949</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone11-white-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 256Gb White</p>
+                            <p class="iphone__item-price">$<span class="price">949</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-midnight-green-select-2019-geo-emea-600x600.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 64Gb Midnight Green</p>
+                            <p class="iphone__item-price">$<span class="price">999</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-silver-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 64Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">999</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-space-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 64Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">999</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-midnight-green-select-2019-geo-emea-600x600.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 256Gb Midnight Green</p>
+                            <p class="iphone__item-price">$<span class="price">1149</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-silver-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 256Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">1149</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-space-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 256Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">1149</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-midnight-green-select-2019-geo-emea-600x600.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 512Gb Midnight Green</p>
+                            <p class="iphone__item-price">$<span class="price">1349</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-silver-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 512Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">1349</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-11-pro-space-select-2019-geo-emea-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro 512Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">1349</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2637-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 64Gb Midnight Green</p>
+                            <p class="iphone__item-price">$<span class="price">1099</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2636-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 64Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">1099</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2635-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 64Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">1099</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2637-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 256Gb Midnight Green</p>
+                            <p class="iphone__item-price">$<span class="price">1249</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2636-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 256Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">1249</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2635-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 256Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">1249</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2637-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 512Gb Midnight Green</p>
+                            <p class="iphone__item-price">$<span class="price">1449</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2636-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 512Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">1449</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/img-2635-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone 11 Pro Max 512Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">1449</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-xs-silver-400x400.jpg" alt="airpods">
+                            <p class="iphone__item-title">iPhone XS 64Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">649</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-xs-space-gray-400x400.jpg" alt="airpods">
+                            <p class="iphone__item-title">iPhone XS 64Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">649</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-xs-silver-400x400.jpg" alt="airpods">
+                            <p class="iphone__item-title">iPhone XS 256Gb Silver</p>
+                            <p class="iphone__item-price">$<span class="price">749</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/iphone-xs-space-gray-400x400.jpg" alt="airpods">
+                            <p class="iphone__item-title">iPhone XS 256Gb Space Gray</p>
+                            <p class="iphone__item-price">$<span class="price">749</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-xr-400x400.jpg" alt="airpods">
+                            <p class="iphone__item-title">iPhone XR 64Gb Black</p>
+                            <p class="iphone__item-price">$<span class="price">599</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-red-xr-400x400.jpg" alt="airpods">
+                            <p class="iphone__item-title">iPhone XR 64Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">599</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-white-xr-400x400.jpg" alt="airpods">
+                            <p class="iphone__item-title">iPhone XR 64Gb White</p>
+                            <p class="iphone__item-price">$<span class="price">599</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                        <a href="index.html">
+                            <img src="images/apple-iphone-xr-400x400.jpg" alt="airpods">
+                                <p class="iphone__item-title">iPhone XR 128Gb Black</p>
+                                <p class="iphone__item-price">$<span class="price">699</span></p>
+                                <button class="related__block-button">ADD TO CART</button>
+                            </a>
+                        </div>
+                        <div class="iphone__item">
+                            <a href="index.html">
+                                <img src="images/apple-iphone-red-xr-400x400.jpg" alt="airpods">
+                                <p class="iphone__item-title">iPhone XR 128Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">699</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>
+                    </div>
+                    <div class="iphone__item">
+                            <a href="index.html">
+                                <img src="images/apple-iphone-white-xr-400x400.jpg" alt="airpods">
+                                <p class="iphone__item-title">iPhone XR 128Gb White</p>
+                                <p class="iphone__item-price">$<span class="price">699</span></p>
+                                <button class="related__block-button">ADD TO CART</button>
+                            </a>
+                        </div>  -->
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="links">
+        <div class="links__bodies">
+            <div class="links__header">Shop and Learn</div>
+            <div class="links__link"><a href="#">TV</a></div>
+            <div class="links__link"><a href="#">iTunes</a></div>
+            <div class="links__link"><a href="#">HomePod</a></div>
+            <div class="links__link"><a href="#">Apple Card</a></div>
+        </div>
+        <div class="links__bodies">
+            <div class="links__header">Apple Store</div>
+            <div class="links__link"><a href="#">Find a Store</a></div>
+            <div class="links__link"><a href="#">Today at Apple</a></div>
+            <div class="links__link"><a href="#">Apple Store App</a></div>
+            <div class="links__link"><a href="#">Shopping Help</a></div>
+        </div>
+        <div class="links__bodies">
+            <div class="links__header">About Apple</div>
+            <div class="links__link"><a href="#">Job Opportunities</a></div>
+            <div class="links__link"><a href="#">Apple Leadership</a></div>
+            <div class="links__link"><a href="#">Newsroom</a></div>
+            <div class="links__link"><a href="#">Events</a></div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer__rights">Copyright © 2020 Apple Inc. All rights reserved.</div>
+        <div class="footer__links">
+            <ul>
+                <li><a href="">Privacy Policy</a> </li>
+                <li><a href="">Terms of Use</a> </li>
+                <li><a href="">Sales and Refunds</a> </li>
+                <li><a href="">Site Map</a> </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="ipad.js"></script>
+
+</body>
+
+</html>
