@@ -1,8 +1,9 @@
+// Burger
+
 function openBurger(e) {
     document.getElementById("openBurger").style.display = "none";
     document.getElementById("hideBurger").style.display = "block";
-    document.getElementById('mobileMenu').style.display = "block";
-    console.log(e.src);
+    document.getElementById('mobileMenu').style.display = "block";    
 }
 
 function hideBurger(e) {
@@ -10,6 +11,21 @@ function hideBurger(e) {
     document.getElementById("hideBurger").style.display = "none";
     document.getElementById('mobileMenu').style.display = "none";
 }
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+// var i;
+
+for (var i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}  
 
 
 

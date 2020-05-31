@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Apple</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__desktop">
+        <div class="header__top">
+          <div class="logo">
+            <p><a href="main.html">helloWorldShop.ua</a></p>
+          </div>
+
+          <div class="signup__bag">                
+                <a href="bag.html" class="header__bag">
+                  <img src="images/19250417991537184110-32.png" alt="" /> Bag
+                  $:<span class="header__bag-total">2696</span>
+                </a>            
+            
+          </div>
+        </div>
+        <div class="header__bottom">
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="main.html">Главная</a>
+                    </li>
+                    <li class="menu-item">
+                        <div class="dropdown">
+                            <p class="dropbtn">Магазин<img src="images/drop-down-arrow.png" alt=""></p>
+                            <div class="dropdown-content">
+                                <a href="catalog-iphone.html">iPhone</a>
+                                <a href="catalog-ipad.html">iPad</a>
+                                <a href="catalog-iphone.html">iMac</a>
+                                <a href="catalog-ipad.html.html">iPhone</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <a href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href=>Блог</a>
+                    </li>  
+                    <li class="menu-item">
+                        <a href="registration.html">Регистрация</a>
+                    </li>                     
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Поиск...">
+                <div class="icon" id="search_icon">
+                    <!--?xml version="1.0" encoding="UTF-8"?-->
+                    <svg id="SVGDoc" width="12" height="12" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 12 12"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>ico</title><path d="M9.04027,7.81565l3.08379,3.09604l-1.21227,1.21264l-3.08379,-3.08399c-0.85808,0.58263 -1.82813,0.90545 -2.848,0.90545c-1.36794,0 -2.53744,-0.48584 -3.50872,-1.457c-0.97129,-0.97133 -1.45689,-2.14101 -1.45689,-3.50886c0,-1.36751 0.48561,-2.53736 1.45689,-3.50886c0.97129,-0.97116 2.14078,-1.45683 3.50872,-1.45683c1.36778,0 2.53751,0.48567 3.50872,1.45683c0.97129,0.9715 1.45697,2.14135 1.45697,3.50886c0,1.02805 -0.32265,1.99395 -0.90542,2.83572zM7.50465,7.50472c0.64352,-0.64359 0.93394,-1.61 0.93394,-2.52479c0,-0.91445 -0.29042,-1.8204 -0.93394,-2.46807c-0.64344,-0.6475 -1.61008,-1.00275 -2.52465,-1.00275c-0.91472,0 -1.85199,0.32383 -2.49939,0.97133c-0.64771,0.64767 -0.97129,1.58504 -0.97129,2.49949c0,0.91479 0.32358,1.8812 0.97129,2.52479c0.6474,0.64325 1.58467,0.99647 2.49939,0.99647c0.91457,0 1.88121,-0.35321 2.52465,-0.99647z" fill="#a9a8a8" fill-opacity="1"></path></g></g></svg>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="header__mobile">
+          <div class="header__mobile-main">
+              <div class="logo">
+                  <p><a href="main.html">hWShop</a></p>
+              </div>
+              <div class="bag-mobile">
+                <a href="bag.html" class="header__bag">
+                    <img src="images/19250417991537184110-32.png" alt="" /> Bag
+                    $:<span class="header__bag-total">2696</span>
+                  </a> 
+              </div>
+
+          </div>
+          <div class="header__mobile-button">
+              <img onclick="hideBurger()" id="hideBurger" src="images/17115838791536572526-48.png" alt="">
+              <img onclick="openBurger()" id="openBurger" src="images/9961263041586786441-48.png" alt="">
+          </div>
+      </div>
+    </header>
+
+    <section id="mobileMenu" class="mobile-menu">
+        <div class="mobile__menu-item">
+            <a href="main.html">Главная</a>
+        </div>
+        <div class="mobile__menu-item dropdown-btn">
+            <a>Магазин<img src="images/drop-down-arrow.png" alt=""></a>
+            
+        </div>
+        <div class="dropdown-container">
+            <a href="catalog-ipad.html">iPad</a>
+            <a href="catalog-iphone.html">iPhone</a>
+            <a href="catalog-ipad.html">iMac</a>
+            <a href="catalog-iphone.html">Watch</a>
+          </div>
+        <div class="mobile__menu-item">
+            <a href="contacts.html">Контакты</a>
+        </div>
+        <div class="mobile__menu-item">
+            <a href="registration.html">Регистрация</a>
+        </div>
+        <div class="search search-mobile mobile__menu-item">
+            <input type="text" placeholder="Поиск...">
+            <div class="icon" id="search_icon">
+                <!--?xml version="1.0" encoding="UTF-8"?-->
+                <svg id="SVGDoc" width="12" height="12" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 12 12"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>ico</title><path d="M9.04027,7.81565l3.08379,3.09604l-1.21227,1.21264l-3.08379,-3.08399c-0.85808,0.58263 -1.82813,0.90545 -2.848,0.90545c-1.36794,0 -2.53744,-0.48584 -3.50872,-1.457c-0.97129,-0.97133 -1.45689,-2.14101 -1.45689,-3.50886c0,-1.36751 0.48561,-2.53736 1.45689,-3.50886c0.97129,-0.97116 2.14078,-1.45683 3.50872,-1.45683c1.36778,0 2.53751,0.48567 3.50872,1.45683c0.97129,0.9715 1.45697,2.14135 1.45697,3.50886c0,1.02805 -0.32265,1.99395 -0.90542,2.83572zM7.50465,7.50472c0.64352,-0.64359 0.93394,-1.61 0.93394,-2.52479c0,-0.91445 -0.29042,-1.8204 -0.93394,-2.46807c-0.64344,-0.6475 -1.61008,-1.00275 -2.52465,-1.00275c-0.91472,0 -1.85199,0.32383 -2.49939,0.97133c-0.64771,0.64767 -0.97129,1.58504 -0.97129,2.49949c0,0.91479 0.32358,1.8812 0.97129,2.52479c0.6474,0.64325 1.58467,0.99647 2.49939,0.99647c0.91457,0 1.88121,-0.35321 2.52465,-0.99647z" fill="#a9a8a8" fill-opacity="1"></path></g></g></svg>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="main">
+        <div class="main-header">
+            Новые поступления
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/IMG_1254-1710x570.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img-1224-1710x570.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img-1225-1710x570.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img-1226-1710x570.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img-1106-1710x570.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img-1087-1710x570.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img-1098-1710x570.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>  
+        </div>
+        <div class="hits">
+            <div class="hits-header">Хиты продаж</div>
+            <div class="hits-container">
+                
+                    <div class="hits-item">                        
+                        <a href="index.html">
+                            <img src="images/apple-iphone-se-2020-64gb-red-mx9u2-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPhone SE 64Gb Red</p>
+                            <p class="iphone__item-price">$<span class="price">399</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>                        
+                    </div>
+                    <div class="hits-item">                        
+                        <a href="index.html">
+                            <img src="images/ipad-pro-11-select-cell-silver-202003-geo-ru-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">iPad Pro 11 2020 Wi-Fi 128Gb</p>
+                            <p class="iphone__item-price">$<span class="price">899</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>                          
+                    </div>
+                    <div class="hits-item">                        
+                        <a href="index.html">
+                            <img src="images/img-2635-400x400.png" alt="airpods">
+                            <p class="iphone__item-title">Apple iPhone 11 Pro 64Gb</p>
+                            <p class="iphone__item-price">$<span class="price">999</span></p>
+                            <button class="related__block-button">ADD TO CART</button>
+                        </a>                        
+                    </div>                    
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section class="links">
+        <div class="links__bodies ">
+            <div class="links__header ">Shop and Learn</div>
+            <div class="links__link "><a href="# ">TV</a></div>
+            <div class="links__link "><a href="# ">iTunes</a></div>
+            <div class="links__link "><a href="# ">HomePod</a></div>
+            <div class="links__link "><a href="# ">Apple Card</a></div>
+        </div>
+        <div class="links__bodies ">
+            <div class="links__header ">Apple Store</div>
+            <div class="links__link "><a href="# ">Find a Store</a></div>
+            <div class="links__link "><a href="# ">Today at Apple</a></div>
+            <div class="links__link "><a href="# ">Apple Store App</a></div>
+            <div class="links__link "><a href="# ">Shopping Help</a></div>
+        </div>
+        <div class="links__bodies ">
+            <div class="links__header ">About Apple</div>
+            <div class="links__link "><a href="# ">Job Opportunities</a></div>
+            <div class="links__link "><a href="# ">Apple Leadership</a></div>
+            <div class="links__link "><a href="# ">Newsroom</a></div>
+            <div class="links__link "><a href="# ">Events</a></div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="footer__rights ">Copyright © 2020 Apple Inc. All rights reserved.</div>
+        <div class="footer__links ">
+            <ul>
+                <li><a href=" ">Privacy Policy</a> </li>
+                <li><a href=" ">Terms of Use</a> </li>
+                <li><a href=" ">Sales and Refunds</a> </li>
+                <li><a href=" ">Site Map</a> </li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
